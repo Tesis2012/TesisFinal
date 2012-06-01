@@ -1,0 +1,185 @@
+/* 
+    Document   : stylehome.css
+    Created on : May 27, 2012, 8:23:15 PM
+    Author     : benjamin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html{
+    background-image: url('../../../resources/images/home/_20.gif');
+    background-repeat:repeat;
+    font-family: Verdana;
+}
+
+body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div.subconteiner{
+    background-image: url('../../../resources/images/home/sombra.png');
+    text-align: center;
+    width: 960px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+div.contenedor{
+    text-align: center;
+    width: 940px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+div.main{
+    
+}
+
+
+div.img{
+    z-index: 10;
+    text-align: left;
+    position: absolute;
+    padding-left: 25px;
+    padding-top: 5px;
+    width: 100px;
+}
+
+div.menu{
+    background-image: url('../../../resources/images/home/main.jpg');
+    height: 35px; 
+    padding-top: 15px;
+    padding-left: 330px;
+}
+
+div.login{
+    /*background-image: url('../../../resources/images/home/_sombra.png');*/
+    background-image: url('../../../resources/images/home/gradientYellow.png');
+    height: 70px;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+div.login a:visited, a:hover, a:active, a:link{
+    color: #5e0000;
+}
+
+div.myslide{
+
+}
+
+div.infocontent{
+    background-image: url('../../../resources/images/home/_sombra.png');
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.infocontent h2{
+    color: #5e0000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+div.infocontent p{
+    text-align: left;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+div.submenu{
+    background-image: url('../../../resources/images/home/main.jpg');
+    height: 25px; 
+    padding-top: 5px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+div.footer{
+    text-align: right;
+    padding-right: 120px;
+    padding-top: 4px;
+    color: black;
+    background-color: white;
+    height: 20px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.button {
+    border-top: 1px solid #ffffff;
+    background: #c4c4c4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(ffffff));
+    background: -webkit-linear-gradient(top, #ffffff, #ffffff);
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: -ms-linear-gradient(top, #e3e3e3, #c4c4c4);
+    background: -o-linear-gradient(top, #e3e3e3, #c4c4c4);
+    padding: 5px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #5e0000;
+    font-size: 14px;
+    font-family: Georgia, Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover {
+    border-top-color: #eaeaea;
+    background: #eaeaea;
+    color: #5e0000;
+}
+
+.button:active {
+    border-top-color: #ffffff;
+    background: #ffffff;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+  color: #000033;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=password], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=password]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}

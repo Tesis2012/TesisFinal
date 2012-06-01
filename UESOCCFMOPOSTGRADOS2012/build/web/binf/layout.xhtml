@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./../resources/stylesheets/home/stylehome.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="./../resources/stylesheets/validators/validationEngine.jquery.css" />
+
+        <script type="text/javascript" src="../resources/scripts/base/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="../resources/scripts/validators/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="../resources/scripts/validators/languages/jquery.validationEngine-es.js" charset="utf-8"></script>
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+            <ui:insert name="top">Top</ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">
+                
+            </ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">Bottom</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta charset="utf-8" />
+        <title>Unidad de Postgrados</title>
+
+        <link rel="stylesheet" href="resources/stylesheets/home/stylehome.css" />
+        <link rel="stylesheet" href="resources/stylesheets/slideHome/orbit-1.2.3.css" />
+        <link rel="stylesheet" href="resources/stylesheets/validators/validationEngine.jquery.css" />
+
+        <script type="text/javascript" src="resources/scripts/base/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/slideHome/jquery.orbit-1.2.3.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/validators/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="resources/scripts/validators/languages/jquery.validationEngine-es.js" charset="utf-8"></script>
+        
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('#featured').orbit({
+
+                });
+            });
+            
+            $(document).ready(
+                function(){
+                    jQuery("#j_idt8").validationEngine("attach");
+                }
+            );
+        </script>
+
+    </h:head>
+
+    <h:body>
+        <div class="subconteiner">
+            <div class="contenedor" >
+                <div class="img">
+                    <img src="resources/images/home/Minerva.png" width="100%" height="100%" alt="minerva"/>
+                </div>
+
+                <div class="main">
+                    <div class="menu">
+                        <a href="#" class="button" style="top: 236px; left: 200px; ">Expediente UES</a>
+                        <a href="#" class="button" style="top: 236px; left: 200px; ">Academica</a>
+                        <a href="#" class="button" style="top: 236px; left: 200px; ">Blog Postgrados</a>
+                        <a href="#" class="button" style="top: 236px; left: 200px; ">Boton Extra</a>
+                    </div>
+                </div>
+
+                <div class="login">
+                    <h:form>                       
+                        <h:outputText value="Ingresar al sistema de egresados de Postgrados de la Universidad de El Salvador " />
+                        <br />
+                        <h:outputText value="Correo: " />
+                        <h:inputText value="#{people.email}" class="validate[required] text-input" autocomplete="off" />
+                        <h:outputText value="Contrasena: " />
+                        <h:inputSecret value="#{people.password}" class="validate[required] text-input" autocomplete="off" maxlength="25"/>
+                        <h:commandButton actionListener="#{peopleBean.getbyquery()}" value="Acceder"  />
+                        <br />
+                        <h:link value="¿Ha olvidado su contrasena?" />
+                    </h:form>
+                </div>
+
+                <div class="myslide">
+                    <div class="container">
+                        <div id="featured"> 
+                            <div class="content" style="">
+                            </div>
+                            <a href=""><img src="resources/images/slideHome/overflow.jpg" /></a>
+                            <img src="resources/images/slideHome/captions.jpg" data-caption="#htmlCaption" />
+                            <img src="resources/images/slideHome/features.jpg" />
+                        </div>
+                        <!-- Captions for Orbit -->
+                        <span class="orbit-caption" id="htmlCaption"><strong>I'm A studen Caption:</strong> I can learn <a href="#">links</a>, <em>style</em> or anything that is valid markup :)</span>
+                    </div>
+                </div>
+                
+                <div class="infocontent">
+                    <table>
+                        <tr>
+                            <td id="t-left">
+                                <img src="resources/images/home/mission.jpg" width="40%" height="40%" style="float: left; padding-top: 10px; padding-right: 5px" />
+                                <h2>Mision</h2>
+                                <p>Coordinar y ejecutar las políticas nacionales de ciencia, tecnología e innovación, con responsabilidad y excelencia continua, facilitando su  articulación, aplicación y seguimiento por medio de mecanismos ágiles y efectivos para impulsar el desarrollo científico y tecnológico del país y coadyuvar al bienestar económico-social. </p>
+                            </td>
+                            <td id="t-right">
+                                <img src="resources/images/home/mission.jpg" width="40%" height="40%" style="float: left; padding-top: 10px; padding-right: 5px" />
+                                <h2>Vision</h2>
+                                <p>Ser referente a nivel nacional e internacional, con autonomía en el desarrollo y proyección del arte, ciencia y patrimonio cultural ecuatoriano, con personal comprometido, de elevada capacidad profesional, ética y moral, sistemas de gestión efectivos, tecnología e infraestructura moderna de la sociedad.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="submenu">
+                    Academica | Postgrados | Universidad Central | Servicios | Unidades
+                </div>
+                <div class="footer">
+                    Universidad de El Salvador, todos los derechos reservados ©
+                </div>
+            </div>
+        </div>  
+    </h:body>
+</html>

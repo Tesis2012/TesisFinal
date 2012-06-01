@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <body>
+        <ui:composition template="./layout.xhtml">
+            
+            <ui:define name="content">
+                <h:form>
+                    <h:outputText value="Primer nombre: " />
+                    <h:inputText value="#{names.firstname}" class="validate[required] text-input" autocomplete="off"/>
+                    <h:outputText value="Segundo nombre: " />
+                    <h:inputText value="#{names.middlename}" class="validate[optional] text-input" autocomplete="off"/>
+                    <h:outputText value="Apellidos: " />
+                    <h:inputText value="#{names.lastname}" class="validate[required] text-input" autocomplete="off"/>
+                    <hr />
+                    <h:outputText value="Direccion: " />
+                    <h:inputText value="#{addresses.address}" class="validate[optional] text-input" autocomplete="off"/>
+                    <br />
+                    
+                    <h:commandButton actionListener="#{informationBean.insertInfo()}" value="Continuar" />
+                </h:form>
+                
+                <h:form>
+                     <br />
+                    
+                    <h:dataTable value="#{informationBean.getphonesNumbersForPeople()}" var="p">
+                        <h:column> #{p.id} </h:column>
+                        <h:column> #{p.phone} </h:column>
+                    </h:dataTable>
+                    
+                    
+                    <h:outputText value="Telefono de casa: " />
+                    <h:inputText value="#{phones.phone}"  class="validate[optional] text-input" autocomplete="off"/>
+                    
+                    -<h:selectOneMenu value="#{phonestypes.id}"  >
+                        <f:selectItem itemLabel="Casa" itemValue="1" />
+                        <f:selectItem itemLabel="Celular" itemValue="2" />
+                        <f:selectItem itemLabel="Oficina" itemValue="3" />
+                        <f:selectItem itemLabel="Extranjero" itemValue="4" />
+                    </h:selectOneMenu>
+                    <h:commandButton actionListener="#{informationBean.savePhoneNumber()}" value="save phone" />
+                </h:form>
+                
+                
+            </ui:define>
+            
+        </ui:composition>
+    </body>
+</html>
