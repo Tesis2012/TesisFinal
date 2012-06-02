@@ -4,8 +4,25 @@
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
         <title>Facelet Title</title>
+         <link rel="stylesheet" href="./../resources/css/jquery-ui-1.8.20.custom.css" type="text/css"/>
+
+        <script type="text/javascript" src="../resources/scripts/base/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../resources/scripts/base/jquery-ui-1.8.20.custom.min.js"></script>
     </h:head>
     <h:body>
+        <script type="text/javascript">
+                 alert("Entra");
+         $(document).ready(function(){
+            
+          $("#phonediv").dialog({
+			autoOpen: true,
+			height: 300,
+			width: 350,
+			modal: true});
+          
+            });
+          
+        </script>
         Hello from Facelets
     </h:body>
 </html>

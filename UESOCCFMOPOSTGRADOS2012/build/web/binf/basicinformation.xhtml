@@ -5,13 +5,19 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     
-  
+    <h:head>
+         <link rel="stylesheet" href="./../resources/css/jquery-ui-1.8.20.custom.css" type="text/css"/>
+
+        <script type="text/javascript" src="../resources/scripts/base/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../resources/scripts/base/jquery-ui-1.8.20.custom.min.js"></script>
+        
+    </h:head>
     
     <body>
-        
-        <ui:composition template="./layout.xhtml">
-            <script type="text/javascript">
+        <script type="text/javascript">
+                 alert("Entra");
          $(document).ready(function(){
+            
           $("#phonediv").dialog({
 			autoOpen: true,
 			height: 300,
@@ -21,7 +27,9 @@
             });
           
         </script>
-            <ui:define name="content">
+        
+            
+         
                 <h:form>
                     <h:outputText value="Primer nombre: " />
                     <h:inputText value="#{names.firstname}" class="validate[required] text-input" autocomplete="off"/>
@@ -60,8 +68,6 @@
                 </h:form>
                 
                 
-            </ui:define>
-            
-        </ui:composition>
+          
     </body>
 </html>
