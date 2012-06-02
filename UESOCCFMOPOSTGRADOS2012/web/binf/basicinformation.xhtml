@@ -6,7 +6,11 @@
       xmlns:f="http://java.sun.com/jsf/core">
     
   
-    <script type="text/javascript">
+    
+    <body>
+        
+        <ui:composition template="./layout.xhtml">
+            <script type="text/javascript">
          $(document).ready(function(){
           $("#phonediv").dialog({
 			autoOpen: true,
@@ -17,10 +21,6 @@
             });
           
         </script>
-    <body>
-        
-        <ui:composition template="./layout.xhtml">
-            
             <ui:define name="content">
                 <h:form>
                     <h:outputText value="Primer nombre: " />
