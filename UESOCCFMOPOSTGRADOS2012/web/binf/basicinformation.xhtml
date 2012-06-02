@@ -10,14 +10,35 @@
 
         <script type="text/javascript" src="../resources/scripts/base/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="../resources/scripts/base/jquery-ui-1.8.20.custom.min.js"></script>
+        <script type="text/javascript" src="../resources/scripts/autocomplete.js"></script>
         
     </h:head>
-    
+    <style>
+	.ui-combobox {
+		position: relative;
+		display: inline-block;
+	}
+	.ui-button {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin-left: -1px;
+		padding: 0;
+		
+	}
+	.ui-autocomplete-input {
+		margin: 0;
+		padding: 0.3em;
+	}
+	</style>
     <body>
         <script type="text/javascript">
                  alert("Entra");
          $(document).ready(function(){
-            
+           
+		$(".cb").combobox();
+		
+	
           $("#phonediv").dialog({
 			autoOpen: true,
 			height: 300,
@@ -56,13 +77,16 @@
                      <div id="phonediv">
                     <h:outputText value="Telefono de casa: " />
                     <h:inputText value="#{phones.phone}"  class="validate[optional] text-input" autocomplete="off"/>
-                    
-                    -<h:selectOneMenu value="#{phonestypes.id}"  >
+                    <div class="ui-widget">
+                        <h:outputText value="test"/>
+                    <h:selectOneMenu value="#{phonestypes.id}" class="cb">
                         <f:selectItem itemLabel="Casa" itemValue="1" />
                         <f:selectItem itemLabel="Celular" itemValue="2" />
                         <f:selectItem itemLabel="Oficina" itemValue="3" />
                         <f:selectItem itemLabel="Extranjero" itemValue="4" />
                     </h:selectOneMenu>
+                    </div>
+                    
                     <h:commandButton actionListener="#{informationBean.savePhoneNumber()}" value="save phone" />
                      </div>
                 </h:form>
