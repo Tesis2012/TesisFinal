@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+             $(document).ready(function(){
+                 $.ajax({
+            url: 'educationinformation.xhtml',
+            success: function(html) {
+               $("#varHTML").html(html);
+            }
+        });
+             
+            $("#wizard").stepy();
+            
+        });
+        </script>
+        <form id="wizard">
+            <fieldset title="Step 1">
+                <legend>description 1</legend>
+                <div id="varHTML"></div>
+                Ingrese su Nombre:<input type="text"/>
+            </fieldset>
+            <fieldset title="Step 2">
+                <legend>description 1</legend>
+               
+                Correo electronico:<input type="text"/>
+            </fieldset>
+            <input type="submit" class="finish" value="Finish!" />
+        </form>
+    </body>
+</html>
