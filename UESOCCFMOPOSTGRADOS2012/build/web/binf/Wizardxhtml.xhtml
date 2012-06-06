@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+         <link rel="stylesheet" type="text/css" href="../resources/css/jquery.stepy.css"/>
+        
+        <link rel="stylesheet" href="../resources/css/jquery-ui-1.8.20.custom.css" type="text/css"/>
+
+        <script type="text/javascript" src="../resources/scripts/base/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../resources/scripts/base/jquery-ui-1.8.20.custom.min.js"></script>
+        <script src="../resources/scripts/Wizard/jquery.stepy.min.js" type="text/javascript"></script>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+             $(document).ready(function(){
+                 $.ajax({
+            url: 'basicinformation.xhtml',
+            success: function(html) {
+               $("#varHTML").html(html);
+            }
+        });
+             
+            $('#wizard').stepy({
+
+});
+            
+        });
+        </script>
+        <form id="wizard">
+            <fieldset title="Step 1">
+                <legend>description 1</legend>
+                <div id="titulo" class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"></div>
+                <div id="varHTML" ></div>
+                Ingrese su Nombre:<input type="text"/>
+            </fieldset>
+            <fieldset title="Step 2">
+                <legend>description 1</legend>
+               
+                Correo electronico:<input type="text"/>
+            </fieldset>
+            <input type="submit" class="finish" value="Finish!" />
+        </form>
+    </body>
+</html>
